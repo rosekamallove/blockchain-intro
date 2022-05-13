@@ -7,10 +7,19 @@ import { ScrollContext } from "./scroll-observer";
 const MastHead: React.FC = () => {
   const refContainer = useRef<HTMLDivElement>(null);
   const { scrollY } = useContext(ScrollContext);
-  console.log(scrollY);
+  let progress = 0;
+
+  const { current: elContainer } = refContainer;
+  if (elContainer) {
+    progress = Math.min(1, scrollY / elContainer.clientHeight);
+  }
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center ">
+    <div
+      ref={refContainer}
+      className="sticky top-0 -z-10 flex min-h-screen flex-col items-center justify-center"
+      style={{ transform: `translateY(-${progress * 20}vh)` }}
+    >
       <video
         autoPlay
         playsInline
