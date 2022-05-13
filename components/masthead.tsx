@@ -4,6 +4,11 @@ import logo from "../public/images/bitcoin-brands-white.png";
 import down from "../public/images/chevron-down-solid-white.png";
 import { ScrollContext } from "./scroll-observer";
 
+function isSafari() {
+  var is_safari = navigator.userAgent.toLowerCase().indexOf("safari/") > -1;
+  return is_safari;
+}
+
 const MastHead: React.FC = () => {
   const refContainer = useRef<HTMLDivElement>(null);
   const { scrollY } = useContext(ScrollContext);
@@ -17,19 +22,29 @@ const MastHead: React.FC = () => {
   return (
     <div
       ref={refContainer}
-      className="sticky top-0 -z-10 flex min-h-screen flex-col items-center justify-center"
+      className={`sticky top-0 -z-10 flex min-h-screen flex-col items-center justify-center ${
+        isSafari() ? "bg-black" : ""
+      }`}
       style={{ transform: `translateY(-${progress * 20}vh)` }}
     >
-      <video
-        autoPlay
-        playsInline
-        muted
-        loop
-        className="absolute  h-full w-full object-cover"
-        style={{ filter: "brightness(20%)" }}
-      >
-        <source src="/assets/block_chain.webm" type="video/webm; codecs=vp9" />
-      </video>
+      {isSafari() ? (
+        ""
+      ) : (
+        <video
+          autoPlay
+          playsInline
+          muted
+          loop
+          className="absolute  h-full w-full object-cover"
+          style={{ filter: "brightness(20%)" }}
+        >
+          <source src="/assets/block_chain.mp4" type="video/mp4" />
+          <source
+            src="/assets/block_chain.webm"
+            type="video/webm; codecs=vp9"
+          />
+        </video>
+      )}
       {/* <Ripple/> */}
 
       <div className={`flex-grow-0  pt-10 transition-opacity duration-1000`}>
