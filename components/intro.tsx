@@ -1,5 +1,5 @@
 import React from "react";
-import BlockChainApplication from "./blochain-application";
+import BlockChainApplication from "./blockchain-application";
 
 const Intro: React.FC = () => {
   return (
@@ -39,7 +39,7 @@ const Intro: React.FC = () => {
       </div>
       <div className="container mx-auto mt-28 px-11 text-center">
         <h2 className="text-4xl font-bold md:text-5xl">
-          Blockchain Applications
+          Applications of the Blockchain
         </h2>
         <div className="md:grid-col-3 mt-10 grid grid-cols-2 gap-6 text-3xl lg:grid-cols-4 lg:gap-20 ">
           <BlockChainApplication title={"Money Transfer"} />
