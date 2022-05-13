@@ -1,5 +1,5 @@
 import Head from "next/head"
-import AboutUs from "../components/aboutus"
+import Intro from "../components/intro"
 import MastHead from "../components/masthead"
 
 const IndexPage = () => {
@@ -9,7 +9,7 @@ const IndexPage = () => {
         <title>BlockChain</title>
       </Head>
       <MastHead/>
-      <AboutUs/>
+      <Intro/>
     </div>
   )
 }

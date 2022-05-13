@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import logo from "../public/images/bitcoin-brands-white.png";
-import down from '../public/images/chevron-down-solid-white.png';
+import down from "../public/images/chevron-down-solid-white.png";
 
 const MastHead: React.FC = () => {
   return (
@@ -12,6 +12,7 @@ const MastHead: React.FC = () => {
         muted
         loop
         className="absolute  h-full w-full object-cover"
+        style={{filter: 'brightness(30%)'}}
       >
         <source src="/assets/block_chain.webm" type="video/webm; codecs=vp9" />
       </video>
@@ -26,8 +27,8 @@ const MastHead: React.FC = () => {
           <span>An introduction to the decentralized web</span>
         </h2>
       </div>
-      <div className="flex-grow-0 pb-20 md:pb-10 transition-all duration-1000">
-        <Image src={down} width={448/9} height={512/9} alt="scroll down"/>
+      <div className="flex-grow-0 pb-20 transition-all duration-1000 md:pb-10">
+        <Image src={down} width={448 / 9} height={512 / 9} alt="scroll down" />
       </div>
     </div>
   );
