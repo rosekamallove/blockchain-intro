@@ -1,18 +1,23 @@
 import Image from "next/image";
-import React, { useContext, useRef } from "react";
+import React, { useCallback, useContext, useRef, useState } from "react";
 import logo from "../public/images/bitcoin-brands-white.png";
 import down from "../public/images/chevron-down-solid-white.png";
 import { ScrollContext } from "./scroll-observer";
 
 const MastHead: React.FC = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const refContainer = useRef<HTMLDivElement>(null);
   const { scrollY } = useContext(ScrollContext);
-  let progress = 0;
 
+  let progress = 0;
   const { current: elContainer } = refContainer;
   if (elContainer) {
     progress = Math.min(1, scrollY / elContainer.clientHeight);
   }
+
+  const handleImageLoaded = useCallback(() => {
+    setImageLoaded(true);
+  }, []);
 
   return (
     <div
@@ -33,8 +38,18 @@ const MastHead: React.FC = () => {
       </video>
       {/* <Ripple/> */}
 
-      <div className={`flex-grow-0  pt-10 transition-opacity duration-1000`}>
-        <Image src={logo} width={512 / 9} height={512 / 9} alt="logo" />
+      <div
+        className={`flex-grow-0  pt-10 transition-opacity duration-1000 ${
+          imageLoaded ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <Image
+          src={logo}
+          width={512 / 9}
+          height={512 / 9}
+          alt="logo"
+          onLoad={handleImageLoaded}
+        />
       </div>
       <div className="z-10 flex w-full  flex-1 flex-col items-center justify-center  p-12 text-center font-bold text-white drop-shadow-[0_3px_1px_rgba(0,0,0,0.2)]">
         <h1 className="mb-6 text-6xl xl:text-7xl">Blockchain</h1>
@@ -42,8 +57,18 @@ const MastHead: React.FC = () => {
           <span>An Introduction to The Decentralized Web</span>
         </h2>
       </div>
-      <div className="flex-grow-0 pb-20 transition-all duration-1000 md:pb-10">
-        <Image src={down} width={448 / 9} height={512 / 9} alt="scroll down" />
+      <div
+        className={`flex-grow-0 pb-20 transition-all duration-1000 md:pb-10 ${
+          imageLoaded ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <Image
+          src={down}
+          width={448 / 9}
+          height={512 / 9}
+          alt="scroll down"
+          onLoad={handleImageLoaded}
+        />
       </div>
     </div>
   );
