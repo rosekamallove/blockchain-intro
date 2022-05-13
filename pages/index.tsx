@@ -3,7 +3,7 @@ import MastHead from "../components/masthead"
 
 const IndexPage = () => {
   return (
-    <div className="bg-slate-50 ">
+    <div>
       <Head>
         <title>BlockChain</title>
       </Head>

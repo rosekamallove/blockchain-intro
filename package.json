@@ -7,12 +7,12 @@
     "type-check": "tsc"
   },
   "dependencies": {
-    "react-three-fiber": "^5.3.22",
-    "three": "^0.126.1",
+    "@react-three/fiber": "^8.0.14",
     "@types/three": "^0.140.0",
     "next": "^12.1.6",
     "react": "^18.0.0-rc.3",
-    "react-dom": "^18.0.0-rc.3"
+    "react-dom": "^18.0.0-rc.3",
+    "three": "^0.140.2"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.1.3",
