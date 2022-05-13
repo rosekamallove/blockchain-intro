@@ -1,6 +1,7 @@
-import Head from "next/head"
-import Intro from "../components/intro"
-import MastHead from "../components/masthead"
+import Head from "next/head";
+import Intro from "../components/intro";
+import MastHead from "../components/masthead";
+import Stats from "../components/stats";
 
 const IndexPage = () => {
   return (
@@ -8,10 +9,11 @@ const IndexPage = () => {
       <Head>
         <title>BlockChain</title>
       </Head>
-      <MastHead/>
-      <Intro/>
+      <MastHead />
+      <Intro />
+      <Stats />
     </div>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

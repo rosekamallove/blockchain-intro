@@ -6,9 +6,9 @@ import "../styles/index.css";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ScrollObserver>
-      <Component {...pageProps}/>
+      <Component {...pageProps} />
     </ScrollObserver>
-  )
+  );
 }
 
 export default MyApp;

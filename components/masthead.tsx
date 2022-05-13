@@ -36,7 +36,6 @@ const MastHead: React.FC = () => {
         <source src="/assets/block_chain.m4v" type="video/mp4; codecs=hvc1 " />
         <source src="/assets/block_chain.webm" type="video/webm; codecs=vp9" />
       </video>
-      {/* <Ripple/> */}
 
       <div
         className={`flex-grow-0  pt-10 transition-opacity duration-1000 ${
