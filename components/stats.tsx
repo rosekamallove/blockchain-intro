@@ -58,8 +58,9 @@ const Stats: React.FC = () => {
             className={`${s.statsText} inline-block`}
             style={{ opacity: opacityForBlock(progress, 3) }}
           >
-            <strong>24%</strong> of companies expect to invest between $5
-            million and $10 million in blockchain during 2021.
+            <strong>24%</strong> of companies expect to invest between{" "}
+            <strong>$5 million </strong>and <strong>$10 million</strong> in
+            blockchain during 2021.
           </span>
         </div>
       </div>
