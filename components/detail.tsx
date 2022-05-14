@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export const DetailContainer: React.FC = ({ children }) => (
@@ -46,5 +47,23 @@ export const DetailRight: React.FC<{ progress: number }> = ({
     >
       <div className="w-full max-w-xl px-10 pt-5 lg:pt-10">{children}</div>
     </div>
+  );
+};
+
+interface LinkProps {
+  href: string;
+}
+
+export const DetailLink: React.FC<LinkProps> = ({ href, children }) => {
+  return (
+    <Link href={href}>
+      <a
+        className="text-black underline decoration-1 underline-offset-8"
+        target="_blank"
+        rel="noreferrer"
+      >
+        {children}
+      </a>
+    </Link>
   );
 };

@@ -5,6 +5,7 @@ import {
   DetailBackground,
   DetailContainer,
   DetailLeft,
+  DetailLink,
   DetailRight,
 } from "./detail";
 import { Tile, TileBackground, TileContent, TileWrapper } from "./tile";
@@ -32,15 +33,27 @@ const Details: React.FC = () => {
                   blockchain is the foundation for immutable ledgers, or records
                   of transactions that cannot be altered, deleted, or destroyed.
                   This is why blockchains are also known as a{" "}
-                  <strong>distributed ledger technology (DLT).</strong>
+                  <DetailLink href="https://www.investopedia.com/terms/d/distributed-ledger-technology-dlt.asp">
+                    distributed ledger technology (DLT).
+                  </DetailLink>
                 </p>
                 <p className="text-xl  text-black">
                   First proposed as a research project in 1991, the blockchain
                   concept predated its first widespread application in use:
                   Bitcoin, in 2009. In the years since, the use of blockchains
-                  has exploded via the creation of various cryptocurrencies,
-                  <strong>decentralized finance (DeFi)</strong> applications,
-                  non-fungible tokens (NFTs), and smart contracts.
+                  has exploded via the creation of various{" "}
+                  <DetailLink href="https://www.investopedia.com/terms/c/cryptocurrency.asp">
+                    cryptocurrencies
+                  </DetailLink>
+                  ,
+                  <DetailLink href="investopedia.com/decentralized-finance-defi-5113835">
+                    decentralized finance (DeFi)
+                  </DetailLink>{" "}
+                  applications,{" "}
+                  <DetailLink href="investopedia.com/non-fungible-tokens-nft-5115211">
+                    non-fungible tokens (NFTs)
+                  </DetailLink>
+                  , and smart contracts.
                 </p>
               </DetailRight>
             </DetailContainer>
@@ -114,7 +127,10 @@ const Details: React.FC = () => {
                 <p className="z-10 py-2 pt-10 text-xl  text-black">
                   Because of the decentralized nature of Bitcoin’s blockchain,
                   all transactions can be transparently viewed by either having
-                  a personal node or using <strong>blockchain explorers</strong>{" "}
+                  a personal node or using{" "}
+                  <DetailLink href="https://www.blockchain.com/explorer?utm_campaign=dcomnav_explorer">
+                    blockchain explorers
+                  </DetailLink>{" "}
                   that allow anyone to see transactions occurring live. Each
                   node has its own copy of the chain that gets updated as fresh
                   blocks are confirmed and added. This means that if you wanted
@@ -149,7 +165,9 @@ const Details: React.FC = () => {
                     className="rounded-full"
                   />
                   <p className="text-4xl font-bold text-black">
-                    Rose Kamal Love
+                    <DetailLink href="https://rosekamallove.vercel.app">
+                      Rose Kamal Love
+                    </DetailLink>
                   </p>
                 </div>
                 <p className="py-2  text-xl  text-black">
@@ -160,9 +178,16 @@ const Details: React.FC = () => {
                   I am a full-stack developer with experience in the MERN stack
                   and have also built a backend with Django. I like to Solve
                   Problems, algorithmic as well as the problems I face while
-                  developing some cool projects like <strong>YouTemy</strong> I
-                  also have a knack for Music, I love to listen as well as
-                  create Music (SoundCloud).
+                  developing some cool projects like{" "}
+                  <DetailLink href="https://github.com/rosekamallove/youtemy">
+                    <strong>YouTemy</strong>
+                  </DetailLink>{" "}
+                  I also have a knack for Music, I love to listen as well as
+                  create Music{" "}
+                  <DetailLink href="https://soundcloud.com/user-276723683">
+                    (SoundCloud)
+                  </DetailLink>
+                  .
                 </p>
               </DetailRight>
             </DetailContainer>
