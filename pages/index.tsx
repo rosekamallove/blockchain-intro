@@ -18,9 +18,9 @@ const IndexPage = () => {
       </Head>
       <MastHead executeScroll={executeScroll} />
       <div ref={introRef}>
-        <Intro />
+        <Stats />
       </div>
-      <Stats />
+      <Intro />
       <Details />
     </div>
   );

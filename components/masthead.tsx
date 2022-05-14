@@ -35,7 +35,7 @@ const MastHead: React.FC<Props> = ({ executeScroll }) => {
         muted
         loop
         className="absolute  h-full w-full object-cover"
-        style={{ filter: "brightness(20%)" }}
+        style={{ filter: "brightness(40%)" }}
       >
         <source src="/assets/block_chain.m4v" type="video/mp4; codecs=hvc1 " />
         <source src="/assets/block_chain.webm" type="video/webm; codecs=vp9" />

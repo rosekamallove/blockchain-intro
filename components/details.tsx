@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import roseImage from "../public/images/rose_photo.jpg";
+import BlockChainApplication from "./blockchain-application";
 import {
   DetailBackground,
   DetailContainer,
@@ -12,7 +13,7 @@ import { Tile, TileBackground, TileContent, TileWrapper } from "./tile";
 
 const Details: React.FC = () => {
   return (
-    <TileWrapper numOfPages={5}>
+    <TileWrapper numOfPages={6}>
       <TileBackground>
         <DetailBackground />
       </TileBackground>
@@ -23,7 +24,7 @@ const Details: React.FC = () => {
             <DetailContainer>
               <DetailLeft progress={progress}>
                 <div className="text-4xl font-bold lg:text-5xl">
-                  How Does a Blockchain Work?
+                  Working of Blockchain
                 </div>
               </DetailLeft>
               <DetailRight progress={progress}>
@@ -150,6 +151,36 @@ const Details: React.FC = () => {
         />
         <Tile
           page={4}
+          renderContent={({ progress }) => (
+            <DetailContainer>
+              <DetailLeft progress={progress}>
+                <div className="text-4xl font-bold lg:text-5xl">
+                  Applications of Blockchain
+                </div>
+              </DetailLeft>
+              <DetailRight progress={progress}>
+                <div className="md:grid-col-3 mt-10 grid grid-cols-2 gap-5 text-xl text-black lg:grid-cols-3  ">
+                  <BlockChainApplication title={"Money Transfer"} />
+                  <BlockChainApplication title={"Financial Exchange"} />
+                  <BlockChainApplication title={"Lending"} />
+                  <BlockChainApplication title={"Insurance"} />
+                  <BlockChainApplication title={"Real Estate"} />
+                  <BlockChainApplication title={"Voting"} />
+                  <BlockChainApplication title={"Artist Royalties"} />
+                  <BlockChainApplication title={"NFTs"} />
+                  <BlockChainApplication title={"Logistics Tracking"} />
+                  <BlockChainApplication title={"Secure IoT"} />
+                  <BlockChainApplication
+                    title={"Secure personal information"}
+                  />
+                  <BlockChainApplication title={"Government benefits"} />
+                </div>
+              </DetailRight>
+            </DetailContainer>
+          )}
+        />
+        <Tile
+          page={5}
           renderContent={({ progress }) => (
             <DetailContainer>
               <DetailLeft progress={progress}>
