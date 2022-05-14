@@ -6,8 +6,8 @@ interface Props {
 
 const BlockChainApplication: React.FC<Props> = ({ title }) => {
   return (
-    <div className="border p-5 transition hover:shadow-lg">
-      <strong>{title}</strong>
+    <div className="cursor-pointer border p-5 font-semibold transition hover:shadow-lg">
+      {title}
     </div>
   );
 };

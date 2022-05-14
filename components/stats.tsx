@@ -30,35 +30,36 @@ const Stats: React.FC = () => {
 
   return (
     <div ref={refContainer} className="bg-black text-white">
-      <div className="mx-auto flex min-h-screen max-w-5xl flex-col  items-center justify-center px-10 py-24 text-center text-4xl font-semibold md:py-28 md:text-6xl lg:px-20 lg:py-36 lg:text-7xl">
+      <div className="mx-auto flex min-h-screen max-w-5xl flex-col  items-center justify-center px-10 py-24  text-4xl font-semibold md:py-28 md:text-6xl lg:px-20 lg:py-36 lg:text-7xl">
         <div className="leading-[1.15]">
           <span
             className={`${s.statsText} inline-block`}
             style={{ opacity: opacityForBlock(progress, 0) }}
           >
-            By the end of 2024, it’s expected that corporations will spend $20
-            billion per year on blockchain technical services.
+            By the end of 2024, it’s expected that corporations will spend{" "}
+            <strong>$20 billion</strong> per year on blockchain technical
+            services.
           </span>
           <span
             className={`${s.statsText} inline-block`}
             style={{ opacity: opacityForBlock(progress, 1) }}
           >
-            About 90% of U.S. and European banks had started exploring
-            blockchain’s potential by 2018.
+            About <strong>90%</strong> of U.S. and European banks had started
+            exploring blockchain’s potential by 2018.
           </span>
           <span
             className={`${s.statsText} inline-block`}
             style={{ opacity: opacityForBlock(progress, 2) }}
           >
-            74% of tech-savvy executive teams say they believe there’s a huge
-            business potential in blockchain technology.
+            <strong>74%</strong> of tech-savvy executive teams say they believe
+            there’s a huge business potential in blockchain technology.
           </span>
           <span
             className={`${s.statsText} inline-block`}
             style={{ opacity: opacityForBlock(progress, 3) }}
           >
-            24% of companies expect to invest between $5 million and $10 million
-            in blockchain during 2021.
+            <strong>24%</strong> of companies expect to invest between $5
+            million and $10 million in blockchain during 2021.
           </span>
         </div>
       </div>

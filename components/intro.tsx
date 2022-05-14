@@ -41,7 +41,7 @@ const Intro: React.FC = () => {
         <h2 className="text-4xl font-bold md:text-5xl">
           Applications of the Blockchain
         </h2>
-        <div className="md:grid-col-3 mt-10 grid grid-cols-2 gap-6 text-3xl lg:grid-cols-4 lg:gap-20 ">
+        <div className="md:grid-col-3 mt-10 grid grid-cols-2 gap-6 text-2xl lg:grid-cols-4 lg:gap-10 ">
           <BlockChainApplication title={"Money Transfer"} />
           <BlockChainApplication title={"Financial Exchange"} />
           <BlockChainApplication title={"Lending"} />
@@ -52,6 +52,8 @@ const Intro: React.FC = () => {
           <BlockChainApplication title={"NFTs"} />
           <BlockChainApplication title={"Logistics Tracking"} />
           <BlockChainApplication title={"Secure IoT"} />
+          <BlockChainApplication title={"Secure personal information"} />
+          <BlockChainApplication title={"Government benefits"} />
         </div>
       </div>
     </section>

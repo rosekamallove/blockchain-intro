@@ -1,17 +1,27 @@
 import Head from "next/head";
+import { useRef } from "react";
+import Details from "../components/details";
 import Intro from "../components/intro";
 import MastHead from "../components/masthead";
 import Stats from "../components/stats";
 
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+
 const IndexPage = () => {
+  const introRef = useRef<HTMLDivElement>(null);
+  const executeScroll = () => scrollToRef(introRef);
+
   return (
     <div>
       <Head>
-        <title>BlockChain</title>
+        <title>Blockchain</title>
       </Head>
-      <MastHead />
-      <Intro />
+      <MastHead executeScroll={executeScroll} />
+      <div ref={introRef}>
+        <Intro />
+      </div>
       <Stats />
+      <Details />
     </div>
   );
 };
