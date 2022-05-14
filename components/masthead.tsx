@@ -53,7 +53,7 @@ const MastHead: React.FC<Props> = ({ executeScroll }) => {
           onLoad={handleImageLoaded}
         />
       </div>
-      <div className=" flex w-full  flex-1 flex-col items-center justify-center  p-12 text-center font-bold text-white drop-shadow-[0_3px_1px_rgba(0,0,0,0.2)]">
+      <div className="flex w-full  flex-1 flex-col items-center justify-center  p-12 text-center font-bold text-white drop-shadow-[0_3px_1px_rgba(0,0,0,0.2)]">
         <h1 className="mb-6 text-6xl xl:text-7xl">Blockchain</h1>
         <h2 className="mb-2  text-2xl tracking-tight xl:text-2xl">
           <span>An Introduction to The Decentralized Web</span>
